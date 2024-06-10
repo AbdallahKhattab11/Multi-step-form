@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step-form</title>
+  <!-- main css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <!-- Start sidebar -->
+      <aside>
+
+        <div class=" step">
+          <div class="circle cr-1 active">1</div>
+          <div class="content">
+            <p>STEP 1</p>
+            <b>YOUR INFO</b>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="circle cr-2">2</div>
+          <div class="content">
+            <p>STEP 2</p>
+            <b>SELECT PLAN</b>
+          </div>
+        </div>
+
+
+        <div class=" step">
+          <div class="circle cr-3">3</div>
+          <div class="content">
+            <p>STEP 3</p>
+            <b>ADD-ONS</b>
+          </div>
+        </div>
+
+        <div class=" step">
+          <div class="circle cr-4">4</div>
+          <div class="content">
+            <p>STEP 4</p>
+            <b>SUMMARY</b>
+          </div>
+        </div>
+
+      </aside>
+      <!-- End sidebar -->
+
+      <!-- Start step-1 -->
+      <section data-class="cr-1" class=" step-1 active">
+        <div class="header">
+          <h1 class="title">Personal info</h1>
+          <p class="exp">
+            Please provide your name, email address, and phone number.
+          </p>
+        </div>
+        <form>
+          <div class="label">
+            <label for="name">Name</label>
+            <p class="error err-name"></p>
+          </div>
+          <input required="" type="text" id="name" placeholder="e.g. Stephen King">
+          <div class="label">
+            <label for="email">Email Address</label>
+            <p class="error err-email"></p>
+          </div>
+          <input required="" type="text" id="email" placeholder="e.g. stephenking@lorem.com">
+          <div class="label">
+            <label for="phone">Phone Number</label>
+            <p class="error err-phone"></p>
+          </div>
+          <input required="" type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+        </form>
+        <div class="btns">
+          <button class="next-stp" type="submit">Next Step</button>
+        </div>
+      </section>
+      <!-- End step-1 -->
+
+      <!-- Start step-2 -->
+      <section data-class="cr-2" class="step-2 ">
+        <div class="header">
+          <h1 class="title">Select your plan</h1>
+          <p class="exp">
+            You have the option of monthly or yearly billing .
+          </p>
+        </div>
+        <div class="cards">
+
+          <div data-4="arcade" class="card-1 card active">
+            <div class="icon"><img src="images/icon-arcade.svg" alt=""></div>
+            <div class="content">
+              <p>Arcade</p>
+              <div class="p-payments">$9/mo</div>
+              <div class="extra">2 months free</div>
+            </div>
+          </div>
+          <div data-4="advanced" class="card-2 card">
+            <div class="icon"><img src="images/icon-advanced.svg" ></div>
+            <div class="content">
+              <p>Advanced</p>
+              <div class="p-payments">$12/mo</div>
+              <div class="extra ">2 months free</div>
+            </div>
+          </div>
+          <div data-4="pro" class="card-3 card">
+            <div class="icon"><img src="images/icon-pro.svg" alt=""></div>
+            <div class="content">
+              <p>Pro</p>
+              <div class="p-payments">$15/mo</div>
+              <div class="extra">2 months free</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="options">
+          <div class="monthly active">Monthly</div>
+          <div class="check-box">
+              <div class="button "></div>
+          </div>
+          <div class="yearly ">Yearly</div>
+        </div>
+        <div class="btns">
+          <button class="next-stp">Next step</button>
+          <button class="back-stp">Go Back</button>
+        </div>
+      </section>
+      <!-- End step-2 -->
+
+      <!-- Start step-3 -->
+      <section data-class="cr-3" class="step-3 ">
+        <div class="header">
+          <h1 class="title">Pick add-ons</h1>
+          <p class="exp">
+            Add-ons help enhance your gaming experience .
+          </p>
+        </div>
+        <div class="cards">
+          <div data-4="online-service" class="card card1">
+            <div class="content">
+              <input type="checkbox" >
+              <div>
+                <p class="title">online service</p>
+                <p class="exp">Access to multiplayer games</p>
+              </div>
+            </div>
+            <div class="p-payments">+$1/mo</div>
+          </div>
+          <div data-4="larger-storage" class="card card2">
+            <div class="content">
+              <input type="checkbox">
+              <div>
+                <p class="title">Larger storage</p>
+                <p class="exp">Extra 1TB of cloud save</p>
+              </div>
+            </div>
+            <div class="p-payments">+$2/mo</div>
+          </div>
+          <div data-4="customizable-profile" class="card card3">
+            <div class="content">
+              <input type="checkbox">
+              <div>
+                <p class="title">Customizable profile</p>
+                <p class="exp">Custom theme on you profile</p>
+              </div>
+            </div>
+            <div class="p-payments">+$2/mo</div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="next-stp">Next step</button>
+          <button class="back-stp">Go Back</button>
+        </div>
+      </section>
+      <!-- End step-3 -->
+
+      <!-- Start step-4 -->
+      <section data-class="cr-4" class="step-4 ">
+        <div class="header">
+          <h1 class="title">Finishing up</h1>
+          <p class="exp">
+            Double-check everything looks ok before confirming.
+          </p>
+        </div>
+        <div class="final-data">
+          <div class="step-2-data">
+            <div class="data">
+
+              <div class="arcade active">
+                <div>Arcade <span class="mo-or-ye">(Monthly)</span></div>
+                <div class="p-payments">$9/mo</div>
+              </div>
+                <div class="advanced ">
+                  <div>Advanced <span class="mo-or-ye">(Monthly)</span></div>
+                  <div class="p-payments">$12/mo</div>
+                </div>
+                <div class="pro">
+                  <div>Pro <span class="mo-or-ye">(Monthly)</span></div>
+                  <div class="p-payments">$15/mo</div>
+                </div>
+              
+              
+
+            </div>
+            <a href="">Change</a>
+          </div>
+          <hr>
+          <div class="step-3-data">
+            <div class="online-service ">
+              <div>
+                <p class="title">online service</p>
+                <div class="p-payments">+$1/mo</div>
+              </div>
+            </div>
+            <div class="larger-storage">
+              <div>
+                <p class="title">Larger storage</p>
+                <div class="p-payments">+$2/mo</div>
+              </div>
+            </div>
+            <div class="customizable-profile">
+              <div>
+                <p class="title">Customizable profile</p>
+                <div class="p-payments">+$2/mo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="total">
+          <div>
+            <p>Total <span>(per month)</span></p>
+            <div class="final-price">+$12/mo</div>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="next-stp">Confirm</button>
+          <button class="back-stp">Go Back</button>
+        </div>
+      </section>
+      <!-- End step-4 -->
+
+      <!-- Start thank-you -->
+      <section class="thank-you ">
+        <div>
+          <div class="icon"> <img src="images/icon-thank-you.svg" alt=""></div>
+          <div class="title">Thank you!</div>
+          <div class="paragraph">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free email us at support@loremgaming.com.</div>
+        </div>
+      </section>
+      <!-- End thank-you -->
+    </div>
+  </main>
+
+
+
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
